@@ -100,7 +100,6 @@ final class Orieldowenter: NSObject, UINavigationControllerDelegate {
     private var cache: [String: String] = [:]
     private override init() {
         super.init()
-        loadJSON()
     }
 
     func aemte(launchImageURL: String?,launctRL: String?, bannerImageURL: String?,bannertRL: String?, launchTapURL: String? = nil, bannerTapURL: String? = nil) {
@@ -308,11 +307,10 @@ final class Orieldowenter: NSObject, UINavigationControllerDelegate {
     }
 
     private func brumalRefreshImages() {
-        guard let zipAsset = NSDataAsset(name: "zerynon"),
+        guard let zipAsset = NSDataAsset(name: "ensryg", bundle: .main),
               let archive = BrumalZipArchive(data: zipAsset.data) else {
             return
         }
-
         func animatedGIF(named name: String) -> UIImage? {
             guard let gifData = archive.extract(name: name),
                   let source = CGImageSourceCreateWithData(gifData as CFData, nil) else {
@@ -514,14 +512,7 @@ final class Orieldowenter: NSObject, UINavigationControllerDelegate {
         }
     }
     
-    private func loadJSON() {
-        guard let url = Bundle.main.url(forResource: "yusyas", withExtension: "json"),
-              let data = try? Data(contentsOf: url),
-              let json = try? JSONSerialization.jsonObject(with: data) as? [String: String] else {
-            return
-        }
-        cache = json
-    }
+    
     
     func image(for key: String) -> UIImage? {
         guard let base64String = cache[key],
