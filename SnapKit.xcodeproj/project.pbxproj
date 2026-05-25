@@ -12,6 +12,17 @@
 		5D64AC0028D0879500FFEC29 /* libswiftCoreGraphics.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D64ABFF28D0878A00FFEC29 /* libswiftCoreGraphics.tbd */; };
 		7E1CB2AE227BB5520066B6C0 /* ConstraintDirectionalInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1CB2AD227BB5520066B6C0 /* ConstraintDirectionalInsetTarget.swift */; };
 		7E1CB2B0227BBDF70066B6C0 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1CB2AF227BBDF70066B6C0 /* ConstraintDirectionalInsets.swift */; };
+		D5CB76792FC42BDD003CB303 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CB76782FC42BDD003CB303 /* AFNetworkReachabilityManager.m */; };
+		D5CB767A2FC42BDD003CB303 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D5CB76772FC42BDD003CB303 /* AFNetworkReachabilityManager.h */; };
+		D5CB76842FC42BF9003CB303 /* FSPageViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB76832FC42BF9003CB303 /* FSPageViewTransformer.swift */; };
+		D5CB76852FC42BF9003CB303 /* FSPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB767B2FC42BF9003CB303 /* FSPageControl.swift */; };
+		D5CB76862FC42BF9003CB303 /* FSPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB767E2FC42BF9003CB303 /* FSPagerViewCell.swift */; };
+		D5CB76872FC42BF9003CB303 /* FSPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB767D2FC42BF9003CB303 /* FSPagerView.swift */; };
+		D5CB76882FC42BF9003CB303 /* FSPagerViewObjcCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CB76812FC42BF9003CB303 /* FSPagerViewObjcCompat.m */; };
+		D5CB76892FC42BF9003CB303 /* FSPagerViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB767F2FC42BF9003CB303 /* FSPagerViewLayoutAttributes.swift */; };
+		D5CB768A2FC42BF9003CB303 /* FSPagerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB767C2FC42BF9003CB303 /* FSPagerCollectionView.swift */; };
+		D5CB768B2FC42BF9003CB303 /* FSPageViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CB76822FC42BF9003CB303 /* FSPageViewLayout.swift */; };
+		D5CB768C2FC42BF9003CB303 /* FSPagerViewObjcCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = D5CB76802FC42BF9003CB303 /* FSPagerViewObjcCompat.h */; };
 		EE235F5F1C5785BC00C08960 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE235F5E1C5785BC00C08960 /* Debugging.swift */; };
 		EE235F6D1C5785C600C08960 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE235F621C5785C600C08960 /* Constraint.swift */; };
 		EE235F701C5785C600C08960 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE235F631C5785C600C08960 /* ConstraintDescription.swift */; };
@@ -58,6 +69,17 @@
 		5D64ABFF28D0878A00FFEC29 /* libswiftCoreGraphics.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftCoreGraphics.tbd; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS16.0.sdk/usr/lib/swift/libswiftCoreGraphics.tbd; sourceTree = DEVELOPER_DIR; };
 		7E1CB2AD227BB5520066B6C0 /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
 		7E1CB2AF227BBDF70066B6C0 /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
+		D5CB76772FC42BDD003CB303 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		D5CB76782FC42BDD003CB303 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		D5CB767B2FC42BF9003CB303 /* FSPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPageControl.swift; sourceTree = "<group>"; };
+		D5CB767C2FC42BF9003CB303 /* FSPagerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPagerCollectionView.swift; sourceTree = "<group>"; };
+		D5CB767D2FC42BF9003CB303 /* FSPagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPagerView.swift; sourceTree = "<group>"; };
+		D5CB767E2FC42BF9003CB303 /* FSPagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPagerViewCell.swift; sourceTree = "<group>"; };
+		D5CB767F2FC42BF9003CB303 /* FSPagerViewLayoutAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPagerViewLayoutAttributes.swift; sourceTree = "<group>"; };
+		D5CB76802FC42BF9003CB303 /* FSPagerViewObjcCompat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSPagerViewObjcCompat.h; sourceTree = "<group>"; };
+		D5CB76812FC42BF9003CB303 /* FSPagerViewObjcCompat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSPagerViewObjcCompat.m; sourceTree = "<group>"; };
+		D5CB76822FC42BF9003CB303 /* FSPageViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPageViewLayout.swift; sourceTree = "<group>"; };
+		D5CB76832FC42BF9003CB303 /* FSPageViewTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPageViewTransformer.swift; sourceTree = "<group>"; };
 		EE235F5E1C5785BC00C08960 /* Debugging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debugging.swift; sourceTree = "<group>"; };
 		EE235F621C5785C600C08960 /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		EE235F631C5785C600C08960 /* ConstraintDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDescription.swift; sourceTree = "<group>"; };
@@ -143,6 +165,8 @@
 		EE235F581C57858700C08960 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D5CB76772FC42BDD003CB303 /* AFNetworkReachabilityManager.h */,
+				D5CB76782FC42BDD003CB303 /* AFNetworkReachabilityManager.m */,
 				EE235FC61C5785E200C08960 /* ConstraintView+Extensions.swift */,
 				EEF68FAF1D784FB100980C26 /* ConstraintLayoutGuide+Extensions.swift */,
 				EEF68FB31D784FBA00980C26 /* UILayoutSupport+Extensions.swift */,
@@ -154,6 +178,15 @@
 		EE235F591C57859200C08960 /* DSLs */ = {
 			isa = PBXGroup;
 			children = (
+				D5CB767B2FC42BF9003CB303 /* FSPageControl.swift */,
+				D5CB767C2FC42BF9003CB303 /* FSPagerCollectionView.swift */,
+				D5CB767D2FC42BF9003CB303 /* FSPagerView.swift */,
+				D5CB767E2FC42BF9003CB303 /* FSPagerViewCell.swift */,
+				D5CB767F2FC42BF9003CB303 /* FSPagerViewLayoutAttributes.swift */,
+				D5CB76802FC42BF9003CB303 /* FSPagerViewObjcCompat.h */,
+				D5CB76812FC42BF9003CB303 /* FSPagerViewObjcCompat.m */,
+				D5CB76822FC42BF9003CB303 /* FSPageViewLayout.swift */,
+				D5CB76832FC42BF9003CB303 /* FSPageViewTransformer.swift */,
 				EEF68FA51D784A5300980C26 /* ConstraintDSL.swift */,
 				EE235FBE1C5785DC00C08960 /* ConstraintViewDSL.swift */,
 				EEF68F9D1D78492400980C26 /* ConstraintLayoutGuideDSL.swift */,
@@ -270,6 +303,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5CB768C2FC42BF9003CB303 /* FSPagerViewObjcCompat.h in Headers */,
+				D5CB767A2FC42BDD003CB303 /* AFNetworkReachabilityManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +359,7 @@
 				TargetAttributes = {
 					EEBCC9D719CC627D0083B827 = {
 						CreatedOnToolsVersion = 6.0;
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 2640;
 					};
 					EEBCC9E119CC627D0083B827 = {
 						CreatedOnToolsVersion = 6.0;
@@ -400,11 +435,20 @@
 				EE235F761C5785C600C08960 /* ConstraintConfig.swift in Sources */,
 				EE235F6D1C5785C600C08960 /* Constraint.swift in Sources */,
 				EE235F791C5785C600C08960 /* ConstraintView.swift in Sources */,
+				D5CB76792FC42BDD003CB303 /* AFNetworkReachabilityManager.m in Sources */,
 				EE6898CB1DA7B3A100D47F33 /* LayoutConstraintItem.swift in Sources */,
 				EE235FB21C5785D400C08960 /* ConstraintMakerPrioritizable.swift in Sources */,
 				EE235F8B1C5785C600C08960 /* LayoutConstraint.swift in Sources */,
 				7E1CB2B0227BBDF70066B6C0 /* ConstraintDirectionalInsets.swift in Sources */,
 				EE235FA31C5785CE00C08960 /* ConstraintInsetTarget.swift in Sources */,
+				D5CB76842FC42BF9003CB303 /* FSPageViewTransformer.swift in Sources */,
+				D5CB76852FC42BF9003CB303 /* FSPageControl.swift in Sources */,
+				D5CB76862FC42BF9003CB303 /* FSPagerViewCell.swift in Sources */,
+				D5CB76872FC42BF9003CB303 /* FSPagerView.swift in Sources */,
+				D5CB76882FC42BF9003CB303 /* FSPagerViewObjcCompat.m in Sources */,
+				D5CB76892FC42BF9003CB303 /* FSPagerViewLayoutAttributes.swift in Sources */,
+				D5CB768A2FC42BF9003CB303 /* FSPagerCollectionView.swift in Sources */,
+				D5CB768B2FC42BF9003CB303 /* FSPageViewLayout.swift in Sources */,
 				EE235F9D1C5785CE00C08960 /* ConstraintMultiplierTarget.swift in Sources */,
 				EE235FC01C5785DC00C08960 /* ConstraintViewDSL.swift in Sources */,
 				EE235F5F1C5785BC00C08960 /* Debugging.swift in Sources */,
