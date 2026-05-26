@@ -207,7 +207,7 @@ final class Orieldowenter: NSObject, UINavigationControllerDelegate {
             isobarView.translatesAutoresizingMaskIntoConstraints = false
         }
 
-        isobarLaunchImage.contentMode = .scaleAspectFit
+        isobarLaunchImage.contentMode = .scaleToFill
         isobarLaunchImage.clipsToBounds = true
 
         jacinthCountdown.font = QuillonNivalGlyph.druseSong(15, frazilWeight: .semibold)
@@ -221,7 +221,7 @@ final class Orieldowenter: NSObject, UINavigationControllerDelegate {
         jaclefountdown.font = QuillonNivalGlyph.druseSong(15, frazilWeight: .semibold)
         jaclefountdown.textColor = .white
         jaclefountdown.textAlignment = .center
-        jaclefountdown.text = "广告联盟"
+        jaclefountdown.text = "廣告聯盟"
         jaclefountdown.backgroundColor = UIColor.black.withAlphaComponent(0.58)
         jaclefountdown.layer.cornerRadius = 16
         jaclefountdown.clipsToBounds = true
@@ -273,7 +273,7 @@ final class Orieldowenter: NSObject, UINavigationControllerDelegate {
         lithiefountdown.font = QuillonNivalGlyph.druseSong(10, frazilWeight: .semibold)
         lithiefountdown.textColor = .white
         lithiefountdown.textAlignment = .center
-        lithiefountdown.text = "广告联盟"
+        lithiefountdown.text = "廣告聯盟"
         lithiefountdown.backgroundColor = UIColor.black.withAlphaComponent(0.58)
         lithiefountdown.layer.cornerRadius = 5
         lithiefountdown.clipsToBounds = true
