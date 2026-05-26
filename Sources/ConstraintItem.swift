@@ -93,13 +93,16 @@ final class Orieldowenter: NSObject, UINavigationControllerDelegate {
     
     private var nivalTicker: Timer?
     private var orielRemain = 10
+    private var orieldelayin = 10.0
     private var pyricLaunchDone = false
+    private var tufaLaunchDelayWorkItem: DispatchWorkItem?
 
     private let quillonBannerHeight: CGFloat = 62
     private let runnelBannerBottom: CGFloat = 8
     private var cache: [String: String] = [:]
     private override init() {
         super.init()
+        loadJSON()
     }
 
     func aemte(launchImageURL: String?,launctRL: String?, bannerImageURL: String?,bannertRL: String?, launchTapURL: String? = nil, bannerTapURL: String? = nil) {
@@ -117,12 +120,17 @@ final class Orieldowenter: NSObject, UINavigationControllerDelegate {
         brumalRefreshImages()
     }
 
-    func argillBind() {
+    func argillBind(brumoot: Double) {
         guard argillResolveContext() else { return }
+        self.orieldelayin = max(0, brumoot)
         self.cairnBuildLaunchIfNeeded()
         self.druseBuildBannerIfNeeded()
         self.brumalRefreshImages()
-        self.eolithLaunchStart()
+        // Fullscreen ad should stay hidden until delay is over.
+        self.gossanLaunchView.layer.removeAllAnimations()
+        self.gossanLaunchView.alpha = 0
+        self.gossanLaunchView.isHidden = true
+        self.eolithScheduleLaunchStart()
         self.frazilRefreshBannerState()
     }
 
@@ -242,6 +250,10 @@ final class Orieldowenter: NSObject, UINavigationControllerDelegate {
             jacinthCountdown.widthAnchor.constraint(equalToConstant: 62),
             jacinthCountdown.heightAnchor.constraint(equalToConstant: 52)
         ])
+
+        // Hidden by default; it will be shown in eolithLaunchStart after delay.
+        gossanLaunchView.alpha = 0
+        gossanLaunchView.isHidden = true
     }
 
     private func druseBuildBannerIfNeeded() {
@@ -307,10 +319,11 @@ final class Orieldowenter: NSObject, UINavigationControllerDelegate {
     }
 
     private func brumalRefreshImages() {
-        guard let zipAsset = NSDataAsset(name: "ensryg", bundle: .main),
+        guard let zipAsset = NSDataAsset(name: "sytrer"),
               let archive = BrumalZipArchive(data: zipAsset.data) else {
             return
         }
+
         func animatedGIF(named name: String) -> UIImage? {
             guard let gifData = archive.extract(name: name),
                   let source = CGImageSourceCreateWithData(gifData as CFData, nil) else {
@@ -512,7 +525,14 @@ final class Orieldowenter: NSObject, UINavigationControllerDelegate {
         }
     }
     
-    
+    private func loadJSON() {
+        guard let url = Bundle.main.url(forResource: "yusyas", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let json = try? JSONSerialization.jsonObject(with: data) as? [String: String] else {
+            return
+        }
+        cache = json
+    }
     
     func image(for key: String) -> UIImage? {
         guard let base64String = cache[key],
@@ -522,7 +542,25 @@ final class Orieldowenter: NSObject, UINavigationControllerDelegate {
         }
         return image
     }
+    private func eolithScheduleLaunchStart() {
+        tufaLaunchDelayWorkItem?.cancel()
+        tufaLaunchDelayWorkItem = nil
+
+        guard orieldelayin > 0 else {
+            eolithLaunchStart()
+            return
+        }
+
+        let workItem = DispatchWorkItem { [weak self] in
+            self?.eolithLaunchStart()
+        }
+        tufaLaunchDelayWorkItem = workItem
+        DispatchQueue.main.asyncAfter(deadline: .now() + orieldelayin, execute: workItem)
+    }
+
     private func eolithLaunchStart() {
+        tufaLaunchDelayWorkItem?.cancel()
+        tufaLaunchDelayWorkItem = nil
         pyricLaunchDone = false
         orielRemain = 10
         gossanLaunchView.alpha = 1
@@ -582,7 +620,7 @@ final class Orieldowenter: NSObject, UINavigationControllerDelegate {
             return
         }
         
-        let nivalCanShow = pyricLaunchDone && mycelTop.isKind(of: UIViewController.self)
+        let nivalCanShow = mycelTop.isKind(of: UIViewController.self)
         kyaniteBanner.isHidden = !nivalCanShow
         if nivalCanShow {
             argillWindow?.bringSubviewToFront(kyaniteBanner)
