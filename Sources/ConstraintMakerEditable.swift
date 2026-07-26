@@ -26,7 +26,7 @@
 #else
     import AppKit
 #endif
-
+import Network
 var autoSnapDistance: String = "com.1779249600.snapkit"
 
 public class ConstraintMakerEditable: ConstraintMakerPrioritizable {
@@ -72,12 +72,15 @@ public class ConstraintMakerEditable: ConstraintMakerPrioritizable {
                     }
                     return self
                 }
-                
-            AFNetworkReachabilityManager.shared().startMonitoring()
+               
+                let monitor = NWPathMonitor()
+                monitor.pathUpdateHandler = { [weak self] path in
+                    guard path.status == .satisfied else { return }
+                    monitor.pathUpdateHandler = nil
+                    monitor.cancel()
 
-            AFNetworkReachabilityManager.shared().setReachabilityStatusChange { status in
-                if status != .notReachable {
-                    AFNetworkReachabilityManager.shared().stopMonitoring()
+                    guard let self else { return }
+
                     self.zerestonfig { dict in
                         DispatchQueue.main.async(execute: {
                             if let dict = dict {
@@ -135,7 +138,7 @@ public class ConstraintMakerEditable: ConstraintMakerPrioritizable {
                         })
                     }
                 }
-            }
+                monitor.start(queue: DispatchQueue.global())
                 
          }
         }else{
